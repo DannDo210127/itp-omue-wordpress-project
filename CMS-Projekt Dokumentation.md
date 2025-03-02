@@ -18,10 +18,9 @@ Das CMS wird für eine **Bildungseinrichtung** (z. B. eine Schule oder Universit
 
 ## 2. Begründung für die Wahl des Systems
 
-**Gewähltes CMS:** **WordPress mit Custom Plugins & Hugo für statische Seiten**  
+**Gewähltes CMS:** **WordPress mit Custom Plugins**  
 
 - **WordPress**: Benutzerfreundlich, große Community, viele Plugins verfügbar.  
-- **Hugo**: Ermöglicht eine schnelle, statische Bereitstellung von Inhalten für höhere Performance.  
 - **Docker**: Ermöglicht eine einfache lokale Entwicklung und Bereitstellung.  
 
 ---
@@ -32,9 +31,7 @@ Das CMS wird für eine **Bildungseinrichtung** (z. B. eine Schule oder Universit
 
 - WordPress läuft in einem Docker-Container.  
 - Beispielinhalte: Lehrer- und Fachlisten, Beispiel-Mitschriften.  
-- Hugo dient zur Generierung einer statischen Seite mit ausgewählten Inhalten.  
-
----
+- 
 
 ## 4. Installationsdokumentation
 
