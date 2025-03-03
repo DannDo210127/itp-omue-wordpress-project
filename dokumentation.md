@@ -69,7 +69,6 @@ services:
 
 | Funktion                         | Plugin                     |
 |----------------------------------|----------------------------|
-| Suchfunktion                     | Relevanssi                 |
 | Kalender für Veranstaltungen     | The Events Calendar        |
 | Kontaktformular                  | Contact Form 7             |
 | Social-Media-Integration         | Social Media Share Buttons |
