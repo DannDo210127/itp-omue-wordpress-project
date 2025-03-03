@@ -20,13 +20,10 @@ Für eine **Schulwebseite** ist ein Content-Management-System (CMS) ideal, da es
 ✔ **Benutzerfreundlich**: Einfache Bedienung ohne Programmierkenntnisse.  
 ✔ **Große Community**: Viele kostenlose Plugins und Themes.  
 ✔ **Erweiterbar**: Unterstützt Funktionen wie News, Anmeldeformulare, Kalender und Social-Media-Integration.  
-✔ **SEO-optimiert**: Plugins wie Yoast SEO helfen bei der Suchmaschinenoptimierung.
 
 ---
 
 ## **3. Installation von WordPress (lokal mit Docker)**
-
-Falls du WordPress lokal testen möchtest, kannst du es mit Docker betreiben.
 
 ### **Schritt 1: Docker installieren**
 
