@@ -4,7 +4,7 @@
 
 ### Zielgruppe
 
-Das CMS wird für eine **Bildungseinrichtung** (z. B. eine Schule oder Universität) entwickelt. Ziel ist es, Mitschriften, Protokolle und Lehrmaterialien strukturiert zu verwalten und schnell auffindbar zu machen.  
+Das CMS wird für eine **Bildungseinrichtung** (z. B. eine Schule oder Universität) entwickelt. Ziel ist es, das sich die Schüler und Lehrer über Lehrinhalte austauschen können.
 
 ### Mehrwerte für die Organisation
 
