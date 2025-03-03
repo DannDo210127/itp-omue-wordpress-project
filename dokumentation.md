@@ -1,39 +1,19 @@
-# **Dokumentation: WordPress als CMS für eine Schulwebseite**
+# Installationsdokumentation: WordPress-Schulwebseite
 
-## **1. Motivation für die Wahl eines CMS**
+## Einleitung
+WordPress wurde als CMS für die Schulwebseite gewählt, weil es einfach zu bedienen ist und viele Funktionen bietet. Lehrer, Schüler und Administratoren können Inhalte ohne Programmierkenntnisse verwalten.
 
-Für eine **Schulwebseite** ist ein Content-Management-System (CMS) ideal, da es eine einfache Verwaltung von Inhalten ermöglicht. Lehrer, Schüler und Administratoren können Inhalte veröffentlichen, ohne technisches Wissen zu benötigen.
-
-### **Mehrwerte für die Schule**
-
-✅ **Einfache Verwaltung**: Lehrer und Admins können Inhalte schnell aktualisieren.  
-✅ **Flexibilität**: Erweiterbar durch Plugins für News, Kalender, Formulare, etc.  
-✅ **Responsives Design**: Optimiert für PC, Tablet und Smartphone.  
-✅ **Benutzerverwaltung**: Unterschiedliche Berechtigungen für Admins, Lehrer und Schüler.
+Das Hosting erfolgt auf einem eigenen Server. Dadurch ist die Zusammenarbeit einfacher, da alle Beteiligten direkten Zugriff auf die Webseite haben.
 
 ---
 
-## **2. Wahl des CMS: WordPress**
+## Installation mit Docker
 
-### **Warum WordPress?**
+### Voraussetzungen
+- Docker und Docker Compose sind installiert.
 
-✔ **Benutzerfreundlich**: Einfache Bedienung ohne Programmierkenntnisse.  
-✔ **Große Community**: Viele kostenlose Plugins und Themes.  
-✔ **Erweiterbar**: Unterstützt Funktionen wie News, Anmeldeformulare, Kalender und Social-Media-Integration.  
-
----
-
-## **3. Installation von WordPress (lokal mit Docker)**
-
-### **Schritt 1: Docker installieren**
-
-Lade Docker Desktop herunter und installiere es.
-
-### **Schritt 2: WordPress mit Docker starten**
-
-Erstelle eine `docker-compose.yml`-Datei mit folgendem Inhalt:
-
-
+### WordPress mit Docker starten
+1. Erstelle eine `docker-compose.yml`-Datei mit folgendem Inhalt:
 
 ```yaml
 version: '3.1'
@@ -56,111 +36,82 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: rootpassword
-
 ```
 
-`docker-compose up -d`
-
-Danach kannst du WordPress unter `http://localhost:8080` aufrufen.
+2. Führe `docker-compose up -d` aus.
+3. Rufe die Seite unter `http://localhost:8080` auf.
 
 ---
 
-## **4. Anpassen der Schulwebseite**
+## Anpassung der Schulwebseite
 
-### **4.1 Neues Theme einbinden**
-
+### Theme installieren
 1. Gehe zu `Design → Themes → Neues Theme hinzufügen`.
-2. Suche nach einem Schul-Theme (z. B. „Education Hub“).
-3. Installieren & aktivieren.
+2. Suche nach einem passenden Schul-Theme.
+3. Installiere und aktiviere das Theme.
 
-### **4.2 Menüführung erstellen**
-
+### Menüstruktur anlegen
 1. Gehe zu `Design → Menüs`.
-2. Erstelle zwei Menüs:
-   - **Hauptmenü** (Startseite, News, Lehrer, Fächer, Kontakt)
-   - **Footer-Menü** (Impressum, Datenschutz, Sitemap)
+2. Erstelle ein Hauptmenü (z. B. Startseite, News, Lehrer, Kontakt).
+3. Erstelle ein Footer-Menü (z. B. Impressum, Datenschutz).
 
-### **4.3 Bilder und Medien verwalten**
-
+### Bilder und Medien verwalten
 1. Gehe zu `Medien → Neu hinzufügen`.
-2. Lade Bilder für Newsbeiträge, Schulveranstaltungen und Lehrerprofile hoch.
+2. Lade Bilder für News, Veranstaltungen und Lehrerprofile hoch.
 
-### **4.4 Beiträge und Kategorien verwalten**
-
-1. Erstelle Kategorien für Inhalte (`Beiträge → Kategorien`).
-   - News
-   - Schulprojekte
-   - Lehrer-Interviews
+### Beiträge und Kategorien verwalten
+1. Gehe zu `Beiträge → Kategorien`.
+2. Lege Kategorien an (z. B. News, Schulprojekte, Interviews).
 
 ---
 
-## **5. Erweiterungen durch Plugins**
+## Unsere Plugins
 
-| Funktion                         | Plugin-Empfehlung          |
-| -------------------------------- | -------------------------- |
-| **Suchfunktion**                 | Relevanssi                 |
-| **Kalender für Veranstaltungen** | The Events Calendar        |
-| **Bannerwerbung**                | Ad Inserter                |
-| **Kontaktformular**              | Contact Form 7             |
-| **Newsfeed (RSS-Feed)**          | WP RSS Aggregator          |
-| **Benutzerregistrierung**        | User Registration          |
-| **Social-Media-Integration**     | Social Media Share Buttons |
-| **SEO-Optimierung**              | Yoast SEO                  |
-| **Sitemap erstellen**            | Google XML Sitemaps        |
+| Funktion                         | Plugin                     |
+|----------------------------------|----------------------------|
+| Suchfunktion                     | Relevanssi                 |
+| Kalender für Veranstaltungen     | The Events Calendar        |
+| Kontaktformular                  | Contact Form 7             |
+| Social-Media-Integration         | Social Media Share Buttons |
+| Mehrsprachigkeit                 | TranslatePress             |
+| News-Widgets                     | WP News and Scrolling Widgets |
+| Forum                             | wpForo                     |
+| SEO-Optimierung                   | Yoast SEO                  |
 
-### **5.1 Kontaktformular einrichten**
-
+### Kontaktformular einrichten
 1. Installiere `Contact Form 7`.
-2. Erstelle ein neues Formular unter `Contact → Neu hinzufügen`.
+2. Erstelle ein neues Formular.
 3. Füge den Shortcode `[contact-form-7 id="123" title="Kontakt"]` auf der Kontakt-Seite ein.
 
-### **5.2 Social-Media-Buttons einfügen**
-
+### Social-Media-Buttons einbinden
 1. Installiere `Social Media Share Buttons`.
-2. Konfiguriere Buttons für Facebook, Instagram und LinkedIn.
+2. Füge Buttons für Facebook, Instagram und LinkedIn hinzu.
 
 ---
 
-## **6. Benutzerverwaltung**
+## Unsere Rollen
 
-| Rolle                  | Berechtigung                                                  |
-| ---------------------- | ------------------------------------------------------------- |
-| **Administrator**      | Kann alles verwalten                                          |
-| **Redakteur (Lehrer)** | Kann Beiträge schreiben, aber nicht veröffentlichen           |
-| **Schüler (Autor)**    | Kann eigene Beiträge schreiben, aber keine anderen bearbeiten |
+| Rolle                  | Berechtigung                                       |
+|------------------------|---------------------------------------------------|
+| Administrator          | Kann alles verwalten                             |
+| Redakteur (Lehrer)     | Kann Beiträge schreiben, aber nicht veröffentlichen |
+| Schüler (Autor)       | Kann eigene Beiträge schreiben                   |
 
-### **Benutzer anlegen**
-
+### Benutzer anlegen
 1. Gehe zu `Benutzer → Neu hinzufügen`.
-2. Wähle die entsprechende Rolle (Administrator, Redakteur, Autor).
+2. Wähle eine Rolle (Administrator, Redakteur, Autor).
 
 ---
 
-## **7. Erweiterte Funktionen**
+## Stärken und Schwächen von WordPress
 
-✅ **Mehrsprachigkeit (K2)**: Plugin „Polylang“ für verschiedene Sprachen.  
-✅ **SEO-Optimierung (K4)**: Yoast SEO zur besseren Google-Platzierung.  
-✅ **Analyse & Statistik (K5)**: Google Analytics über das Plugin „MonsterInsights“.  
-✅ **Dokumentenmanagement (K6)**: WP Document Revisions zur Verwaltung von Dateien.
+### Vorteile
+- Einfache Bedienung für Lehrer und Schüler
+- Viele kostenlose Themes und Plugins
+- Gute Erweiterbarkeit und SEO-Optimierung
 
----
-
-## **8. Präsentation & Fazit**
-
-### **Stärken von WordPress als CMS für eine Schulwebseite**
-
-✔ Einfache Nutzung für Lehrer und Schüler  
-✔ Viele kostenlose Themes & Plugins  
-✔ Gute Erweiterbarkeit & SEO-Optimierung
-
-### **Schwächen**
-
-❌ Sicherheit: Updates müssen regelmäßig durchgeführt werden  
-❌ Performance: Viele Plugins können die Ladegeschwindigkeit verlangsamen
+### Nachteile
+- Regelmäßige Updates notwendig
+- Zu viele Plugins können die Geschwindigkeit beeinträchtigen
 
 ---
-
-## **9. Fazit & Weiterentwicklung**
-
-Mit WordPress kann eine **moderne Schulwebseite** umgesetzt werden, die **News, Lehrer-Profile, Stundenpläne und Veranstaltungen** enthält.  
-Für die Zukunft könnte eine **App-Anbindung** oder ein **interner Mitgliederbereich** für Schüler hinzugefügt werden.
